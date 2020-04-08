@@ -1,12 +1,5 @@
-import Link from 'next/link';
+import withLayout from '../components/BasicLayout';
 
-export default function Index() {
-    return (
-      <div>
-        <Link href="/about">
-            <a title="About Page">About Page</a>
-        </Link>
-        <p>Hello Next.js</p>
-      </div>
-    );
-  }
+const Page = () => <p>Hello Next.js</p>;
+
+export default withLayout(Page);
