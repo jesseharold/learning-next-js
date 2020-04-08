@@ -13,7 +13,7 @@ const ShowLink = props => (
 
  const Index = props => (
     <Layout>
-        <h1>Batman TV Shows</h1>
+        <h1>Star Trek TV Shows</h1>
         <ul>
         {props.shows.map(show => (
             <ShowLink key={show.id} id={show.id} name={show.name} />
@@ -23,7 +23,7 @@ const ShowLink = props => (
 );
 
 Index.getInitialProps = async function() {
-    const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
+    const res = await fetch('https://api.tvmaze.com/search/shows?q=star%20trek');
     const data = await res.json();
 
     console.log(`Show data fetched. Count: ${data.length}`);
